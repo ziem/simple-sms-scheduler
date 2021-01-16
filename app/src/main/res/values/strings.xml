@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SMS Scheduler</string>
+
+    <string-array name="time_units">
+        <item>seconds</item>
+        <item>minutes</item>
+        <item>hours</item>
+        <item>days</item>
+    </string-array>
+</resources>

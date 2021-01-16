@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/messagesFragment">
+
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.github.ziem.simplesmsscheduler.feature.messages.MessagesFragment"
+        android:label="MessagesFragment">
+        <action
+            android:id="@+id/action_messagesFragment_to_addEditMessageFragment"
+            app:destination="@id/addEditMessageFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/addEditMessageFragment"
+        android:name="com.github.ziem.simplesmsscheduler.feature.add_edit_message.AddEditMessageFragment"
+        android:label="AddEditMessageFragment">
+        <argument
+            android:name="message"
+            app:argType="com.github.ziem.simplesmsscheduler.model.Message" />
+    </dialog>
+</navigation>

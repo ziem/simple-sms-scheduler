@@ -57,7 +57,7 @@ dependencies {
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
     implementation "androidx.sqlite:sqlite-ktx:2.1.0"
-    implementation "androidx.room:room-runtime:2.2.6"
+    implementation "androidx.room:room-runtime:2.3.0"
     kapt "androidx.room:room-compiler:2.2.6"
     implementation "androidx.room:room-rxjava2:2.2.6"
     implementation "androidx.room:room-common:2.2.6"

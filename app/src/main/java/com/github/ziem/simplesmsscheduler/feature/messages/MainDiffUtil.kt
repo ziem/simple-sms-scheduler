@@ -1,8 +1,10 @@
 package com.github.ziem.simplesmsscheduler.feature.messages
 
+import android.annotation.SuppressLint
 import androidx.recyclerview.widget.DiffUtil
 import com.github.ziem.simplesmsscheduler.model.Message
 
+@SuppressLint("DiffUtilEquals")
 object MainDiffUtil : DiffUtil.ItemCallback<Any>() {
     override fun areItemsTheSame(oldItem: Any, newItem: Any): Boolean {
         return if (oldItem is Message && newItem is Message) {

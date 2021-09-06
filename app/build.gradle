@@ -85,7 +85,7 @@ dependencies {
     implementation "com.jakewharton.rxbinding3:rxbinding-swiperefreshlayout:3.1.0"
 
     kaptTest "com.github.stephanenicolas.toothpick:toothpick-compiler:3.1.0"
-    testImplementation "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
+    testImplementation "com.nhaarman:mockito-kotlin-kt1.1:1.6.0"
 
     testImplementation("org.threeten:threetenbp:1.5.1"){
         exclude group: "com.jakewharton.threetenabp", module: "threetenabp"

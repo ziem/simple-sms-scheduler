@@ -52,7 +52,7 @@ dependencies {
     implementation "androidx.navigation:navigation-runtime-ktx:2.3.5"
     implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
     implementation "androidx.recyclerview:recyclerview:1.2.1"
-    implementation "androidx.constraintlayout:constraintlayout:2.1.1"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.2"
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
     implementation "androidx.room:room-runtime:2.3.0"
@@ -98,5 +98,5 @@ dependencies {
     androidTestImplementation "com.github.stephanenicolas.toothpick:toothpick-testing:3.1.0"
     androidTestImplementation "com.android.support.test:runner:1.0.2"
     androidTestImplementation "com.android.support.test:rules:1.0.2"
-    androidTestImplementation "org.mockito:mockito-android:4.0.0"
+    androidTestImplementation "org.mockito:mockito-android:4.1.0"
 }

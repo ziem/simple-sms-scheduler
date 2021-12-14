@@ -211,10 +211,9 @@ class AddEditMessageFragment : BottomSheetDialogFragment(), TimePickerDialog.OnT
     }
 
     private fun chooseContact() {
-        val contactPickerIntent = Intent(
-            Intent.ACTION_PICK,
-            ContactsContract.CommonDataKinds.Phone.CONTENT_URI
-        )
+        val contactPickerIntent = Intent(Intent.ACTION_PICK).apply {
+            type = ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE
+        }
         contactPickerIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
         startActivityForResult(contactPickerIntent, PICK_CONTACT_REQUEST_CODE)

@@ -54,7 +54,7 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:2.1.3"
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.2.0"
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
-    implementation "androidx.room:room-runtime:2.4.0"
+    implementation "androidx.room:room-runtime:2.4.1"
     kapt "androidx.room:room-compiler:2.4.0"
     implementation "androidx.room:room-rxjava2:2.4.0"
     implementation "androidx.room:room-common:2.4.0"

@@ -48,7 +48,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1"
     implementation "androidx.navigation:navigation-common:2.3.5"
     implementation "androidx.navigation:navigation-common-ktx:2.3.5"
-    implementation "androidx.navigation:navigation-runtime-ktx:2.3.5"
+    implementation "androidx.navigation:navigation-runtime-ktx:2.5.1"
     implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
     implementation "androidx.recyclerview:recyclerview:1.2.1"
     implementation "androidx.constraintlayout:constraintlayout:2.1.4"

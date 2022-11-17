@@ -10,7 +10,7 @@ class MessagesViewModelFactory @Inject constructor(
     private val loadMessagesUseCase: LoadMessagesUseCase,
     private val deleteCompletedMessagesUseCase: DeleteCompletedMessagesUseCase
 ) : ViewModelProvider.NewInstanceFactory() {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return MessagesViewModel(
             null,
             loadMessagesUseCase,

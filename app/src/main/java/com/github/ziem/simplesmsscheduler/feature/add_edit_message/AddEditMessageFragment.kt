@@ -17,12 +17,10 @@ import android.widget.FrameLayout
 import android.widget.TimePicker
 import android.widget.Toast
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.github.ziem.simplesmsscheduler.R
-import com.github.ziem.simplesmsscheduler.alarm.AlarmScheduler
 import com.github.ziem.simplesmsscheduler.binding.viewBinding
 import com.github.ziem.simplesmsscheduler.contact.ContactsDao
 import com.github.ziem.simplesmsscheduler.databinding.FragmentAddEditMessageBinding
@@ -53,9 +51,6 @@ class AddEditMessageFragment : BottomSheetDialogFragment(), TimePickerDialog.OnT
     lateinit var messageViewModelFactory: AddEditMessageViewModelFactory
 
     @Inject
-    lateinit var alarmScheduler: AlarmScheduler
-
-    @Inject
     lateinit var contactsDao: ContactsDao
 
     private val binding by viewBinding(FragmentAddEditMessageBinding::bind)
@@ -73,8 +68,7 @@ class AddEditMessageFragment : BottomSheetDialogFragment(), TimePickerDialog.OnT
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        viewModel = ViewModelProvider(this, messageViewModelFactory)
-            .get(AddEditMessageViewModel::class.java)
+        viewModel = ViewModelProvider(this, messageViewModelFactory)[AddEditMessageViewModel::class.java]
 
         if (savedInstanceState == null) {
             viewModel.dispatch(Action.InitMessage(args.message))
@@ -106,9 +100,9 @@ class AddEditMessageFragment : BottomSheetDialogFragment(), TimePickerDialog.OnT
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.observableState.observe(this, Observer { state ->
+        viewModel.observableState.observe(this) { state ->
             state?.let { renderState(state) }
-        })
+        }
 
         disposables += binding.chip.clicks()
             .subscribe {
@@ -171,6 +165,7 @@ class AddEditMessageFragment : BottomSheetDialogFragment(), TimePickerDialog.OnT
         disposables.clear()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         val result: Uri? = data?.data
@@ -185,6 +180,7 @@ class AddEditMessageFragment : BottomSheetDialogFragment(), TimePickerDialog.OnT
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,

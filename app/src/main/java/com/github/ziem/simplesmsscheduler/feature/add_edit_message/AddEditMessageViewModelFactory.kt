@@ -12,7 +12,7 @@ class AddEditMessageViewModelFactory @Inject constructor(
     private val deleteMessageUseCase: DeleteMessageUseCase,
     private val alarmScheduler: AlarmScheduler
 ) : ViewModelProvider.NewInstanceFactory() {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return AddEditMessageViewModel(
             null,
             saveMessageUseCase,

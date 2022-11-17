@@ -1,7 +1,7 @@
 package com.github.ziem.simplesmsscheduler.model
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 import org.threeten.bp.OffsetDateTime
 import java.util.*
 

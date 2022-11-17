@@ -41,16 +41,16 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-    implementation "androidx.appcompat:appcompat:1.4.2"
-    implementation "androidx.core:core-ktx:1.8.0"
-    implementation "androidx.fragment:fragment-ktx:1.4.1"
+    implementation "androidx.appcompat:appcompat:1.5.1"
+    implementation "androidx.core:core-ktx:1.9.0"
+    implementation "androidx.fragment:fragment-ktx:1.5.4"
     implementation "androidx.lifecycle:lifecycle-common:2.5.1"
     implementation "androidx.lifecycle:lifecycle-common-java8:2.5.1"
     implementation "androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1"
-    implementation "androidx.navigation:navigation-common:2.3.5"
-    implementation "androidx.navigation:navigation-common-ktx:2.3.5"
-    implementation "androidx.navigation:navigation-runtime-ktx:2.3.5"
-    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
+    implementation "androidx.navigation:navigation-common:2.5.3"
+    implementation "androidx.navigation:navigation-common-ktx:2.5.3"
+    implementation "androidx.navigation:navigation-runtime-ktx:2.5.3"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
     implementation "androidx.recyclerview:recyclerview:1.2.1"
     implementation "androidx.constraintlayout:constraintlayout:2.1.4"
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.2.0"
@@ -68,7 +68,7 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:2.2.21"
     implementation "io.reactivex.rxjava2:rxkotlin:2.4.0"
 
-    implementation "com.google.android.material:material:1.6.1"
+    implementation "com.google.android.material:material:1.7.0"
 
     implementation "javax.inject:javax.inject:1"
     implementation "com.github.stephanenicolas.toothpick:toothpick:3.1.0"
@@ -87,7 +87,7 @@ dependencies {
     kaptTest "com.github.stephanenicolas.toothpick:toothpick-compiler:3.1.0"
     testImplementation "com.nhaarman:mockito-kotlin-kt1.1:1.6.0"
 
-    testImplementation("org.threeten:threetenbp:1.6.4"){
+    testImplementation("org.threeten:threetenbp:1.6.4") {
         exclude group: "com.jakewharton.threetenabp", module: "threetenabp"
     }
 

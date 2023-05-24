@@ -45,7 +45,7 @@ class AlarmScheduler @Inject constructor(private val context: Application) {
                 action = AlarmReceiver.ACTION_SEND
             }
             val alarmPendingIntent =
-                PendingIntent.getBroadcast(context, messageId.hashCode(), alarmIntent, 0)
+                PendingIntent.getBroadcast(context, messageId.hashCode(), alarmIntent, PendingIntent.FLAG_IMMUTABLE)
 
             alarmManager.cancel(alarmPendingIntent)
         }
